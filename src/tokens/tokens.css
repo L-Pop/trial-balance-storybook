@@ -1,0 +1,81 @@
+/*
+ * Design tokens mirrored from the "M3/Color" and "M3/Spacing" Figma variable
+ * collections in the Trial Balance file (figma.com/design/YCIOOyXcatc7zjImBIegHP).
+ * Light mode values only — add a [data-theme="dark"] block using the same
+ * variable names + the collection's Dark mode values when dark mode is needed.
+ */
+:root {
+  /* sys/* -- M3 system roles */
+  --sys-surface: #fffbfe;
+  --sys-surface-container-low: #f7f2fa;
+  --sys-surface-container: #f3edf7;
+  --sys-surface-container-high: #ece6f0;
+  --sys-on-surface: #1c1b1f;
+  --sys-on-surface-variant: #49454f;
+  --sys-outline: #79747e;
+  --sys-outline-variant: #cac4d0;
+  --sys-primary: #6750a4;
+  --sys-secondary-container: #e8def8;
+  --sys-on-secondary-container: #1d192b;
+  --sys-error-container: #f9dedc;
+  --sys-on-error-container: #410e0b;
+  --sys-error: #b3261e;
+
+  /* ext/* -- extended/custom roles (financial "success" green, not in M3 baseline) */
+  --ext-success: #146c2e;
+
+  /* comp/* -- component-tier tokens, aliased to sys/ext where the spec calls for reuse */
+  --comp-row-container: var(--sys-surface);
+  --comp-row-container-alt: var(--sys-surface-container-low);
+  --comp-row-hover-state-layer: rgba(103, 80, 164, 0.08); /* primary @ 8% */
+  --comp-row-selected-container: var(--sys-secondary-container);
+  --comp-row-selected-label: var(--sys-on-secondary-container);
+  --comp-row-error-container: var(--sys-error-container);
+  --comp-row-error-label: var(--sys-on-error-container);
+  --comp-row-error-indicator: var(--sys-error);
+  --comp-value-positive: var(--ext-success);
+  --comp-value-negative: var(--sys-error);
+  --comp-sticky-divider: var(--sys-outline-variant);
+  --comp-sticky-shadow: rgba(28, 27, 31, 0.12);
+
+  /* density/* -- three cell-padding tiers */
+  --density-comfortable-block: 14px;
+  --density-comfortable-inline: 16px;
+  --density-standard-block: 10px;
+  --density-standard-inline: 16px;
+  --density-compact-block: 6px;
+  --density-compact-inline: 12px;
+
+  /* Elevation -- 2-layer shadow + primary-tinted surface overlay, per level */
+  --elevation-0: none;
+  --elevation-1: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --elevation-2: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 2px rgba(0, 0, 0, 0.15);
+  --elevation-3: 0 1px 3px rgba(0, 0, 0, 0.3), 0 4px 8px 3px rgba(0, 0, 0, 0.15);
+
+  /* Typography -- matches the M3/* text styles in the Figma file */
+  --font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  --type-label-medium-size: 12px;
+  --type-label-medium-line: 16px;
+  --type-label-medium-tracking: 0.5px;
+  --type-label-medium-weight: 500;
+
+  --type-label-large-size: 14px;
+  --type-label-large-line: 20px;
+  --type-label-large-tracking: 0.1px;
+  --type-label-large-weight: 500;
+
+  --type-body-medium-size: 14px;
+  --type-body-medium-line: 20px;
+  --type-body-medium-tracking: 0.25px;
+  --type-body-medium-weight: 400;
+
+  --type-body-medium-emphasis-size: 14px;
+  --type-body-medium-emphasis-line: 20px;
+  --type-body-medium-emphasis-tracking: 0.1px;
+  --type-body-medium-emphasis-weight: 500;
+
+  --type-body-small-size: 12px;
+  --type-body-small-line: 16px;
+  --type-body-small-tracking: 0.4px;
+  --type-body-small-weight: 400;
+}

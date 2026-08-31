@@ -1,0 +1,74 @@
+.tb-row {
+  display: grid;
+  grid-template-columns: 32px minmax(120px, 1fr) minmax(72px, 140px) minmax(72px, 140px) 32px;
+  align-items: center;
+  background: var(--comp-row-container);
+  border-bottom: 1px solid var(--sys-outline-variant);
+  position: relative;
+}
+
+.tb-row__leading,
+.tb-row__trailing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.tb-row__check {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--comp-row-selected-label);
+  color: #fff;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tb-row__error-badge {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--comp-row-error-indicator);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tb-row--hover {
+  background-image: linear-gradient(var(--comp-row-hover-state-layer), var(--comp-row-hover-state-layer));
+}
+
+.tb-row--selected {
+  background: var(--comp-row-selected-container);
+}
+
+.tb-row--selected .tb-cell {
+  color: var(--comp-row-selected-label);
+}
+
+.tb-row--disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.tb-row--error {
+  background: var(--comp-row-error-container);
+}
+
+.tb-row--error .tb-cell:not(.tb-cell--error) {
+  color: var(--comp-row-error-label);
+}
+
+.tb-row:not(.tb-row--disabled) {
+  cursor: pointer;
+}
+
+.tb-row:not(.tb-row--disabled):hover {
+  background-image: linear-gradient(var(--comp-row-hover-state-layer), var(--comp-row-hover-state-layer));
+}

@@ -1,0 +1,39 @@
+.tb-cell {
+  min-width: 72px;
+  max-width: 220px;
+  padding: var(--density-standard-block) var(--density-standard-inline);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family);
+  font-size: var(--type-body-medium-size);
+  line-height: var(--type-body-medium-line);
+  letter-spacing: var(--type-body-medium-tracking);
+  color: var(--sys-on-surface);
+  font-variant-numeric: tabular-nums;
+  background: transparent;
+}
+
+.tb-cell__value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.tb-cell--editable {
+  cursor: text;
+}
+
+.tb-cell--editing {
+  background: var(--sys-surface-container-high);
+  outline: 1.5px solid var(--sys-primary);
+  outline-offset: -1.5px;
+  border-radius: 2px;
+}
+
+.tb-cell--error {
+  background: var(--comp-row-error-container);
+  color: var(--comp-row-error-label);
+  font-weight: var(--type-body-medium-emphasis-weight);
+}
